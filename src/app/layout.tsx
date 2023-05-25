@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-br">
       <body className={`${roboto.variable} bg-gray-900 font-sans`}>
         <Header />
-        <main className="mx-auto max-w-4xl">{children}</main>
+        <main className="mx-auto my-14 max-w-4xl">{children}</main>
       </body>
     </html>
   )

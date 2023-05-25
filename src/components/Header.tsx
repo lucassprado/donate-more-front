@@ -3,21 +3,23 @@
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { api } from '@/lib/api'
+// import { api } from '@/lib/api'
+
+import donateMoreLogo from '../assets/donate-more-logo.svg'
 
 export function Header() {
   const pathName = usePathname()
 
-  async function signIn() {
-    const response = await api.get('/auth')
+  // async function signIn() {
+  //   const response = await api.get('/auth')
 
-    console.log(response.data)
-  }
+  //   console.log(response.data)
+  // }
 
   return (
     <div className="flex w-full items-center border-b border-gray-800 py-6">
       <Image
-        src="Logo.svg"
+        src={donateMoreLogo}
         alt="Donate more logo"
         width={120}
         height={42}
@@ -35,7 +37,7 @@ export function Header() {
         </Link>
 
         <Link
-          href="/my-ads"
+          href="/ads/published"
           className={
             pathName === '/my-ads' ? `font-bold text-cyan-500` : `text-zinc-100`
           }
@@ -44,7 +46,7 @@ export function Header() {
         </Link>
       </div>
 
-      <button onClick={signIn}>Sign in</button>
+      {/* <button onClick={signIn}>Sign in</button> */}
     </div>
   )
 }
