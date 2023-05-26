@@ -10,7 +10,7 @@ interface ParamsProps {
 
 export default function Ad({ params }: ParamsProps) {
   return (
-    <div className="flex flex-col justify-start gap-5">
+    <div className="flex flex-col justify-start gap-4">
       <Link href="/">
         <ChevronLeft
           size={36}
